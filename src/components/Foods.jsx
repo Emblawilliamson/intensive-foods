@@ -45,6 +45,10 @@ class Foods extends Component {
       </>
     );
   }
+  handleDelete = (food) => {
+    const foods = this.state.foods.filter((f) => f._id !== food._id);
+    this.setState({ foods: foods });
+  };
 }
 
 export default Foods;
